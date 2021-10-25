@@ -9,9 +9,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Fahrettin's website </title>
-  <link rel="stylesheet" type="text/css" href="css/myGridMe.css?<?php echo time(); ?>">
-  <link rel="stylesheet" type="text/css" href="css/topNav.css?<?php echo time(); ?>">
-  <script src="javaScript/javascriptCodes.js"></script>
+  <link rel="stylesheet" type="text/css" href="myGridMe.css?<?php echo time(); ?>">
+  <link rel="stylesheet" type="text/css" href="topNav.css?<?php echo time(); ?>">
+  <script src="javascriptCodes.js"></script>
 </head>
 <body>
     <ul class="topnav" id="myTopNavbar">
