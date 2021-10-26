@@ -63,18 +63,31 @@ if(isset($_POST['submit']))
 
 
 ?>
-    <h1>my Homework</h1>
-    <p>Fahrettin Baştürk, 18243610023</p>
-    <form class="MyFrom" action="projectFahrettin.php" method="post" autocomplete="on" >
-        <label for="username">Enter your username:</label><br>
-        <input type="text" id="username" name="username" /> <span class="error"> <?php echo $UsernameError; ?> </span> <br> 
-        <label for="password">Enter your password:</label> <br>
-        <input type="password" id="password" name="password" /> <span class="error"> <?php echo $PasswordError; ?> </span> <br>
-        <input  type="submit" name="submit" value="let me in">  <br> 
-    </form>
+<div class="site">
 
-    <span class="error"> <?php echo $generalError; ?> </span>
-    <br>
+    <h1 class="page-title">Everything will be better in future</h1>
+    <div class="definition">
+        <h2 class="contentTitle">my Homework</h2>
+        <p class="contentMyText">Fahrettin Baştürk, 18243610023</p>
+        <p class="contentMyText"> this is an basic form login application I did that with using php with simple html codes. In future I will fix the problem of cookies </p>
+
+    </div>
+    <div class="codeSide">
+        <div class="justifyMiddle">
+        <form class="MyFrom" action="projectFahrettin.php" method="post" autocomplete="on" >
+            <label for="username">Enter your username:</label><br>
+            <input type="text" id="username" name="username" /> <span class="error"> <?php echo $UsernameError; ?> </span> <br> 
+            <label for="password">Enter your password:</label> <br>
+            <input type="password" id="password" name="password" /> <span class="error"> <?php echo $PasswordError; ?> </span> <br>
+            <input  type="submit" name="submit" value="let me in">  <br> 
+        </form>
+
+        <span class="error"> <?php echo $generalError; ?> </span>
+        <br>
+        </div>
+    </div>
+    
+    
     <br>
     <div class="botnav" id="myNavbar">
         <a href="#home" class="active">Home</a>
@@ -83,5 +96,7 @@ if(isset($_POST['submit']))
         <a href="#about">About</a>
         <a href="javascript:void(0);" style="font-size:16px;" class="icon" onclick="myFunction()">&#9776;</a>
       </div>
+</div>
+    
 </body>
 </html>
