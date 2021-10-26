@@ -50,7 +50,7 @@ if(isset($_POST['submit']))
 
         }
     }
-    elseif (!("ferivonus" == $UsernameCode) && !("code" == $passwordCode)) 
+    elseif (("ferivonus" != $UsernameCode) || ("code" != $passwordCode)) 
     {
         $generalError = "You wrote wrong !!";
     }
