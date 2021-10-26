@@ -17,7 +17,7 @@ p, span, form{
 	padding: 1em;
 	color: aliceblue;
 }
-span.error {
+.error {
 	color: red;
 }
 
