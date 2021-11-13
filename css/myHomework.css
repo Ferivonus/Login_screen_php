@@ -11,9 +11,8 @@ textarea {
 
 body{
 	background-color:#404040;
-    margin: 0;
 }
-p, span, form{
+p, form{
 	padding: 1em;
 	color: aliceblue;
 }
@@ -30,11 +29,38 @@ h3 {
 	text-align: center;
 }
 
-form.MyFrom{
+form.MyFrom, .MyFrom{
     font-family: "Lucida Console", "Courier New", monospace;
-} 
+}
+/* For lables */
+form.HomeworkForm{
+  font-size: 18px;
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+form.HomeworkForm input[type=text],form.HomeworkForm  input[type=password],form.HomeworkForm   input[type=submit]{
+  font-size: 20px;
+  box-sizing: border-box;
+  font-family: "Lucida Console", "Courier New", monospace;
 
-/* My old codes to make it better */
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: lightblue;
+}
+input[type=submit]{
+  cursor: pointer;
+  background-color: #45a049;
+
+}
+.homework{
+  background-color: #34e7e4;
+}
+
+/* 
+  same of them my old codes
+  and some of them I wrote for this homework 
+  to make it better :3 
+ */
 body {
     margin: 0;
     color: #f9f9f9;
@@ -109,6 +135,10 @@ body {
     padding: 0;
     text-align: justify;
   }
+  
+  .TheConclusion{
+    background-color: springgreen;
+  }
 
   @supports not (display: grid)
     {
@@ -126,12 +156,20 @@ body {
       .site {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto 1fr 1fr;
+        grid-template-rows: auto 1fr auto 1fr auto;
         grid-template-areas:
           "content-head content-head"
           "definition codeSide"
+          "TheConclusion TheConclusion"
+          "homework homework"
           "gitCodeAddress gitCodeAddress";
       }
+    }
+    .TheConclusion{
+      grid-area: TheConclusion;
+    }
+    .homework{
+      grid-area: homework;
     }
 
     .page-title {
@@ -155,6 +193,8 @@ body {
             grid-template-areas:
               "content-head content-head content-head"
                 "definition codeSide codeSide"
+                "TheConclusion TheConclusion TheConclusion"
+                "homework homework homework"
                 "gitCodeAddress gitCodeAddress gitCodeAddress";
         }
     }

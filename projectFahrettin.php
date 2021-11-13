@@ -6,97 +6,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/myHomework.css?<?php echo time(); ?>">
     <link rel="stylesheet" type="text/css" href="css/topNav.css?<?php echo time(); ?>">
-    <script src="javaScript/javascriptCodes.js"></script>
+    <script src="javascript/formJs.js"></script>
     <title>my Homework 1</title>
 </head>
 <body>
-    <ul class="topnav" id="myTopNavbar">
-      <li><a href="default.php">Home</a></li>
-      <li><a href="me.php">Me</a></li>
-      <li><a href="MyBlog.php">Blog</a></li>
-      <li class="dropdown">
-        <a href="javascript:void(0)" class="dropbtn">Projects</a>
-            <div class="dropdown-content">
-                <a href="project1.php">Project 1</a>
-                <a href="project2.php">Project 2</a>
-                <a href="project3.php">Project 3</a>
-                <a class="active" href="projectFahrettin.php">Form Homework</a>
 
-            </div>
-    </li>
-    <li class="right"><a href="#about">About</a></li>
-    <li class="iconTop"><a style="font-size:16px;" href="javascript:void(0);" onclick="myFunctionTop()">&#9776;</a></li>
-
-    </ul>
-    <?php
-        $passwordCode = $UsernameCode = $UsernameError = $PasswordError = " ";
-        $generalError = $empty = ""; 
-
-if(isset($_POST['submit']))
-{
-    $UsernameCode = $_POST['username'];
-    $passwordCode = $_POST['password'];
-    if (($empty == $UsernameCode) || ( $empty == $passwordCode))
-    {
-        if($empty == $UsernameCode)
-        {
-            $UsernameError = "Username is required";
-            
-
-        }
-        if($empty == $passwordCode)
-        {
-            $PasswordError = "password is required";
-
-        }
-    }
-    elseif (("ferivonus" != $UsernameCode) || ("code" != $passwordCode)) 
-    {
-        $generalError = "You wrote wrong !!";
-    }
-    elseif (("ferivonus" == $UsernameCode) && ("code" == $passwordCode))
-    {
-        header("location: me.php"); 
-        exit;
-    } 
-}
-
-
-?>
 <div class="site">
 
     <h1 class="page-title">Everything will be better in future</h1>
     <div class="definition">
         <h2 class="contentTitle">my Homework</h2>
         <p class="contentMyText">Fahrettin Baştürk, 18243610023</p>
-        <p class="contentMyText"> this is an basic form login application I did that with using php with simple html codes. In future I will fix the problem of cookies </p>
-
+        <p class="contentMyText"> this is an basic form login application I did that with using JavaScript with simple html codes. </p>
+        <p class="contentMyText"> This code a fully opening website page to taking accounts before taking inside of the website, with couples of error messages.</p>
+        <p class="contentMyText"> With these, there is a format for username and password too, username and password's length have to between 5 and 20 with that, password at least have to be a special character and integer.</p>
     </div>
     <div class="codeSide">
+<H2>Prototype:</H2>
         <div class="justifyMiddle">
-        <form class="MyFrom" action="projectFahrettin.php" method="post" autocomplete="on" >
-            <label for="username">Enter your username:</label><br>
-            <input type="text" id="username" name="username" /> <span class="error"> <?php echo $UsernameError; ?> </span> <br> 
-            <label for="password">Enter your password:</label> <br>
-            <input type="password" id="password" name="password" /> <span class="error"> <?php echo $PasswordError; ?> </span> <br>
-            <input  type="submit" name="submit" value="let me in">  <br> 
-        </form>
 
-        <span class="error"> <?php echo $generalError; ?> </span>
+        <form class="MyFrom" method="post" action="me.php" >
+                <label for="username">username:</label><br>
+                <input type="text" id="usernameTop" name="username" placeholder="Enter your username" /> <span id="UsernameErrorTop" class="error">  </span> <br> 
+                <label for="password">password:</label> <br>
+                <input type="password" id="passwordTop" name="password" placeholder="Enter your password" /> <span id="PasswordErrorTop" class="error">  </span> <br>
+                <input type="submit" name="submit" value="Log me in" onclick=Stop()>
+                <p id="generalErrorTop" class="error"> </p>
+            </form>  
+        </div>
         <br>
         </div>
+        <div class="TheConclusion">
+        <h3>So, The conclusion of this code is seeing and working like this:</h3> 
+        </div>
+        
+        
+        <div class="homework">
+         <h2 >welcome to my website  ┬─┬ ノ( ゜-゜ノ)</h2>
+         <h3 class="contentTitle">But do I know you?</h3>
+        <div class="justifyMiddle">
+        <form class="HomeworkForm" method="post" action="me.php" >
+                <label for="username">username:</label><br>
+                <input type="text" id="username" name="username" placeholder="Enter your username" />  <span id="UsernameError" class="error"></span> <br>
+                <label for="password">password:</label> <br>
+                <input type="password" id="password" name="password" placeholder="Enter your password" />  <span id="PasswordError" class="error"></span> <br> 
+                <input type="submit" name="submit" value="Log me in" onclick=LoginFunc()>
+            </form>  
+            <p id="generalError" class="error"> </p>
+        </div>
+        
+        
+        </div>
+        </div>
+        <div class="gitCodeAddress">
+        <p>github link for this code: <a target="_blank" style="color: #ffd32a;" href="https://github.com/Ferivonus/username-and-password-php">I AM HERE</a></p>
     </div>
+
+        
+        
+
+
+
+
+
+        
+
+
     
-    
+
     <br>
-    <div class="botnav" id="myNavbar">
-        <a href="#home" class="active">Home</a>
-        <a href="tarotCards.php">Tarot meanings</a>
-        <a href="#contact">Contact</a>
-        <a href="#about">About</a>
-        <a href="javascript:void(0);" style="font-size:16px;" class="icon" onclick="myFunction()">&#9776;</a>
-      </div>
-</div>
     
 </body>
 </html>
