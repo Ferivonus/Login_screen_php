@@ -150,15 +150,14 @@ function isSet(userName,Password){
         document.getElementById('PasswordError').innerHTML = "";      
 
     }
-    if(controller == 2){
-        return true;
+    if(controller == 2){  
         document.getElementById('generalError').innerHTML = "";
-
+        return true;
     }
     else {
-        return false;
+       
         document.getElementById('generalError').innerHTML = "";
-
+        return false;
     }
 }
 

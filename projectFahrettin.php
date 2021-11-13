@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/myHomework.css?<?php echo time(); ?>">
     <link rel="stylesheet" type="text/css" href="css/topNav.css?<?php echo time(); ?>">
-    <script src="javascript/formJs.js"></script>
+    <script src="javaScript/formJs.js"></script>
     <title>my Homework 1</title>
 </head>
 <body>
@@ -62,17 +62,6 @@
         <p>github link for this code: <a target="_blank" style="color: #ffd32a;" href="https://github.com/Ferivonus/username-and-password-php">I AM HERE</a></p>
     </div>
 
-        
-        
-
-
-
-
-
-        
-
-
-    
 
     <br>
     
